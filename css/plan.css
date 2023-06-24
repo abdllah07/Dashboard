@@ -1,0 +1,173 @@
+
+
+:root{
+    --text-color:rgba(128, 128, 128, 0.683);
+}
+@media(max-width:500px){
+
+.R-panel{
+    display: none;
+}
+header{
+    display: block;
+}
+}
+@keyframes transleft{
+    from{
+        left:100%;
+        transform: translateY(-10px);
+    }
+    to{
+        left:0 ;
+        transform: translateY(0);
+    }
+}
+@keyframes transright{
+    from{
+        right:100%;
+        transform: translateY(-10px);
+    }
+    to{
+        right:0 ;
+        transform: translateY(0);
+    }
+}
+
+.right-section .title {
+    position: relative;
+    z-index: -1;
+    margin-left: 10px;
+
+
+}
+ul{
+    display:flex;
+    position: relative !important;
+    gap: 10px!important;
+    width: 0px;
+    background-color: none !important;
+}
+ul li { 
+    padding: 0;
+    margin: 0;
+}
+.right-section .title h4 {
+    font-size: 24px;
+    margin-top: 20px;
+
+}
+
+.right-section .title::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 100px;
+    height: 3px;
+    background-color: red;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.right-section .boxses {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill ,minmax(300px,1fr) );
+    margin-top: 20px;
+    margin-left: 10px;  
+    position: relative;
+    animation:transleft 0.75s;
+}
+
+@media(max-width:800px){
+    .right-section  .boxses {
+        grid-template-columns: repeat(auto-fill ,minmax(300px,1fr) );
+    }
+}
+@media(max-width:500px){
+    .right-section  .boxses {
+        grid-template-columns: repeat(auto-fill ,minmax(200px,1fr) );
+
+    }
+}
+
+
+.right-section  .boxses .box-one{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px;
+    overflow: hidden;
+
+}
+
+.right-section  .boxses .box-one:first-child .box-head
+{
+    outline: 3px solid rgba(0, 128, 0, 0.662);
+
+}
+.right-section  .boxses .box-one:nth-child(2) .box-head{
+    outline: 3px solid rgba(0, 0, 255, 0.475);
+
+}
+.right-section  .boxses .box-one:nth-child(3) .box-head{
+    outline: 3px solid rgba(255, 166, 0, 0.511);
+
+}
+.right-section  .boxses .box-one .box-head{
+    text-align: center;
+    border: 3px solid white;
+    padding: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+    animation:transright 1s;
+
+}
+.right-section  .boxses .box-one .box-head
+p{
+    color:white;
+    font-size: 20px;
+}
+
+.right-section  .boxses .box-one .box-body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+
+
+}
+.right-section  .boxses .box-one .box-body ul {
+    width: 100%;
+    border-bottom: 1px solid var(--text-color);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.right-section  .boxses .box-one .box-body ul li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.right-section  .boxses .box-one .box-body ul li i:first-child {
+    text-align: start;
+    color:green;
+    padding-right: 5px;
+}
+.right-section  .boxses .box-one .box-body ul li p {
+    width: 300px;
+}
+.right-section  .boxses .box-one .box-body ul li i:last-child{
+    background-color: gray;
+    border-radius: 50px;
+    font-size: 10px;
+    padding: 5px;
+    color:white;
+}
+
+.right-section  .boxses .box-one button{
+    color:white;
+    padding: 10px 20px ;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+}

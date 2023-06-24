@@ -1,0 +1,78 @@
+/* start left panel */
+
+.all {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+
+.R-panel{
+    width: 150px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation:transIn 0.75s;
+}
+@keyframes transIn{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity:1 ;
+        transform: translateY(0);
+    }
+}
+.R-panel .title p{
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+.R-panel .title::after{
+content: '';
+width: 50px;
+height: 1px;
+background-color:var(--red-color);
+position: absolute;
+top: 50px;
+
+}
+.R-panel div { 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly ;
+    margin-top: 20px;
+    text-align: start;
+    transition: all 0.5s ease-in;
+    padding:10px;
+}
+.R-panel div:hover{
+    background-color:#24292d96;
+    color:white;
+    
+}
+.R-panel div:hover  i ,
+.R-panel div:hover  a{
+    color:white;
+}
+.R-panel div:hover  i 
+.R-panel div i {
+    margin-right: 10px;
+    color: black;
+}
+.R-panel div a { 
+    color:black;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: start;
+    width: 50%;
+}
+@media (max-width:750px){
+    .R-panel{
+        display: none;
+    }
+}
+/* end  left panel */

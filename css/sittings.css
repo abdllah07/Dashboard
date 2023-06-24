@@ -1,0 +1,427 @@
+
+@keyframes transright{
+    from{
+        opacity:0;
+        transform: translateY(200px);
+    }
+    to{
+        opacity:1 ;
+        transform: translateY(0);
+    }
+}
+
+
+
+.right-section .title{
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    z-index: -1;
+    margin-left: 20px;
+}
+.right-section .title h4 {
+    font-size: 24px;
+}
+.right-section .title::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 100px;
+    height: 3px;
+    background-color: red;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.right-section .boxses{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+.right-section .boxses .box_one,
+.right-section .boxses .box_tow,
+.right-section .boxses .box_three,
+.right-section .boxses .box_fowr,
+.right-section .boxses .box_five,
+.right-section .boxses .box_sex{
+    width: 33%;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: rgba(100, 100, 111, 0.263) 0px 7px 29px 0px;
+    margin-top: 20px;
+    position: relative;
+    animation:transright 0.75s;
+}
+.right-section .boxses .box_one .box_title,
+.right-section .boxses .box_one .web_control ,
+.right-section .boxses .box_tow .box_title , 
+.right-section .boxses .box_three .box_title ,
+.right-section .boxses .box_fowr .box_title ,
+.right-section .boxses .box_five .box_title , 
+.right-section .boxses .box_sex .box_title{
+    width: 100%;
+}
+.right-section .boxses .box_one .web_control{
+    display: flex;  
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top:20px ;
+}
+
+.right-section .boxses .box_one .box_title h5,
+.right-section .boxses .box_one .web_control h5,
+.right-section .boxses .box_tow .box_title h5 ,
+.right-section .boxses .box_three .box_title h5 , 
+.right-section .boxses .box_fowr .box_title h5 ,
+.right-section .boxses .box_five .box_title h5 ,
+.right-section .boxses .box_sex .box_title h5{
+    padding-bottom: 5px;
+}
+.right-section .boxses .box_one .box_title p,
+.right-section .boxses .box_one .web_control p,
+.right-section .boxses .box_tow .box_title p , 
+.right-section .boxses .box_three .box_title p ,
+.right-section .boxses .box_fowr .box_title p , 
+.right-section .boxses .box_five .box_title p ,
+.right-section .boxses .box_sex .box_title p {
+    color:gray;
+    font-size:10px;
+    margin-bottom: 5px;
+}
+
+.right-section .boxses .box_one .web_control .switch ,
+.right-section .boxses .box_three .factor  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+}
+.right-section .boxses .box_one .web_control .switch input ,
+.right-section .boxses .box_three .factor  .switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.right-section .boxses .box_one .web_control .slider ,
+.right-section .boxses .box_three .factor .slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.right-section .boxses .box_one .web_control .slider:before ,
+.right-section .boxses .box_three .factor  .slider:before{
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0px;
+    bottom: 0px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.right-section .boxses .box_one .web_control input:checked + .slider ,
+.right-section .boxses .box_three .factor input:checked + .slider  {
+    background-color: #2196F3;
+}
+.right-section .boxses .box_one .web_control input:focus + .slider ,
+.right-section .boxses .box_three .factor input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+.right-section .boxses .box_one .web_control input:checked + .slider:before ,
+.right-section .boxses .box_three .factor input:checked + .slider:before
+{
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(40px);
+}
+
+.right-section .boxses .box_one .web_control .slider.round,
+.right-section .boxses .box_three .factor .slider.round {
+    border-radius: 34px;
+}
+.slider.round:before ,
+.right-section .boxses .box_three .factor.slider .round:before{
+    border-radius: 50%;
+}
+
+.right-section .boxses .box_tow  , 
+.right-section .boxses .box_three {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.right-section .boxses .box_tow .box_title p ,
+.right-section .boxses .box_three .box_title p , 
+.right-section .boxses .box_five .box_title p , 
+.right-section .boxses .box_sex .box_title p { 
+    margin-bottom: 15px;
+}
+.right-section .boxses .box_tow .inputs{
+    position: relative;
+}
+.right-section .boxses .box_tow .inputs .f_name , 
+.right-section .boxses .box_tow .inputs .l_name,
+.right-section .boxses .box_tow .inputs .Email{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+
+}
+.right-section .boxses .box_tow .inputs .f_name label,
+.right-section .boxses .box_tow .inputs .l_name label,
+.right-section .boxses .box_tow .inputs .Email label{
+    margin-bottom: 5px;
+}
+.right-section .boxses .box_tow .inputs .f_name input,
+.right-section .boxses .box_tow .inputs .l_name input,
+.right-section .boxses .box_tow .inputs .Email input{
+    margin-bottom: 10px;
+    border: none;
+    padding: 5px;
+    border-radius: 6px;
+}
+.right-section .boxses .box_tow .inputs button,
+.right-section .boxses .box_three .pass button,
+.right-section .boxses .box_three .device button{
+    border: none;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 6px;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+}
+
+
+.right-section .boxses .box_three .pass,
+.right-section .boxses .box_three .factor,
+.right-section .boxses .box_three .device{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.228);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.right-section .boxses .box_three .pass .pass_title p,
+.right-section .boxses .box_three .factor .factor_title p ,
+.right-section .boxses .box_three .device .device_title p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+
+
+.right-section .boxses .box_fowr .twitter,
+.right-section .boxses .box_fowr .facebook,
+.right-section .boxses .box_fowr .linkedin , 
+.right-section .boxses .box_fowr .youtube {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 10px 10px 0px;
+    padding: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.146);
+    border-radius: 6px;
+    background-color: rgba(128, 128, 128, 0.285);
+}
+.right-section .boxses .box_fowr .twitter i{
+    color:rgb(7, 7, 106);
+    border-right: 1px solid rgb(7, 7, 106);
+    margin: 0;
+    border-right-width: 2px;
+    padding-right: 5px;
+}
+.right-section .boxses .box_fowr .facebook i{
+    color : blue;
+    border-right: 1px solid blue;
+    margin: 0;
+    border-right-width: 2px;
+    padding-right: 5px;
+}
+.right-section .boxses .box_fowr .linkedin i{
+    color: rgb(36, 36, 74);
+    border-right: 1px solid rgb(36, 36, 74);
+    margin: 0;
+    border-right-width: 2px;
+    padding-right: 5px;
+}
+.right-section .boxses .box_fowr .youtube i{
+    color :red;
+    border-right: 1px solid red;
+    margin: 0;
+    border-right-width: 2px;
+    padding-right: 2px;
+}
+
+.right-section .boxses .box_fowr .twitter h6 , 
+.right-section .boxses .box_fowr .facebook h6 ,
+.right-section .boxses .box_fowr .linkedin h6,
+.right-section .boxses .box_fowr .youtube h6{
+    color:rgba(128, 128, 128, 0.719)
+}
+
+.right-section .boxses .box_five .checks ,
+.right-section .boxses .box_sex .checks{ 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+
+}
+.right-section .boxses .box_five .checks .quick,
+.right-section .boxses .box_five .checks .target,
+.right-section .boxses .box_five .checks .ticket,
+.right-section .boxses .box_five .checks .latset,
+.right-section .boxses .box_five .checks .tasks,
+.right-section .boxses .box_five .checks .items ,
+.right-section .boxses .box_sex .checks .daily,
+.right-section .boxses .box_sex .checks .weekly,
+.right-section .boxses .box_sex .checks .monthly{
+    display: flex;
+    align-items: center;
+}
+.right-section .boxses .box_five .checks .quick input,
+.right-section .boxses .box_five .checks .target input,
+.right-section .boxses .box_five .checks .ticket input,
+.right-section .boxses .box_five .checks .latset input,
+.right-section .boxses .box_five .checks .tasks input,
+.right-section .boxses .box_five .checks .items input ,
+.right-section .boxses .box_sex .checks .daily input,
+.right-section .boxses .box_sex .checks .weekly input,
+.right-section .boxses .box_sex .checks .monthly input{
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 2px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.right-section .boxses .box_five .checks .quick input:checked,
+.right-section .boxses .box_five .checks .target input:checked,
+.right-section .boxses .box_five .checks .ticket input:checked,
+.right-section .boxses .box_five .checks .latset input:checked,
+.right-section .boxses .box_five .checks .tasks input:checked,
+.right-section .boxses .box_five .checks .items input:checked ,
+.right-section .boxses .box_sex .checks .daily input:checked,
+.right-section .boxses .box_sex .checks .weekly input:checked,
+.right-section .boxses .box_sex .checks .monthly input:checked {
+    background-color: blue;
+}
+.right-section .boxses .box_five .checks .quick input:checked + label:after,
+.right-section .boxses .box_five .checks .target input:checked + label:after,
+.right-section .boxses .box_five .checks .ticket input:checked + label:after,
+.right-section .boxses .box_five .checks .latset input:checked + label:after,
+.right-section .boxses .box_five .checks .tasks input:checked + label:after,
+.right-section .boxses .box_five .checks .items input:checked + label:after,
+.right-section .boxses .box_sex .checks .daily input:checked + label:after,
+.right-section .boxses .box_sex .checks .weekly input:checked + label:after,
+.right-section .boxses .box_sex .checks .monthly input:checked + label:after{
+    position: relative;
+    top: -4px;
+    left: 2px;
+    content: '\2714';
+    font-size: 14px;
+    color :blue
+}
+
+
+.right-section .boxses .box_sex .checks{
+    border-bottom:  1px solid gray;
+    padding-bottom: 20px;
+
+}
+.right-section .boxses .box_sex .chose{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 20px;
+}
+.right-section .boxses .box_sex .chose .megaman,
+.right-section .boxses .box_sex .chose .Zero{
+    border: 1px solid gray;
+}
+.right-section .boxses .box_sex .chose .Sigma{
+    border: 1px solid blue;
+
+}
+.right-section .boxses .box_sex .chose .Sigma i ,
+.right-section .boxses .box_sex .chose .Sigma p{
+    color:blue;
+
+}
+.right-section .boxses .box_sex .chose .megaman,
+.right-section .boxses .box_sex .chose .Zero,
+.right-section .boxses .box_sex .chose .Sigma{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    border-radius:6px;
+    justify-content: space-between;
+}
+
+@media(max-width:900px){
+    .right-section .boxses .box_one,
+.right-section .boxses .box_tow,
+.right-section .boxses .box_three,
+.right-section .boxses .box_fowr,
+.right-section .boxses .box_five,
+.right-section .boxses .box_sex{
+    width: 47%;
+}
+
+}
+
+@media(max-width:500px){
+    .right-section .boxses .box_one,
+.right-section .boxses .box_tow,
+.right-section .boxses .box_three,
+.right-section .boxses .box_fowr,
+.right-section .boxses .box_five,
+.right-section .boxses .box_sex{
+    width: 97%;
+}
+.R-panel{
+    display: none;
+}
+header{
+    display: block;
+}
+}
+

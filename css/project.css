@@ -1,0 +1,330 @@
+
+@keyframes left-move {
+    50% {
+        left: 0;
+        width: 12px;
+        height:100%;
+      }
+      100% {
+        border-radius: 10px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+  }
+  @keyframes come-left {
+    0% {
+        transform: translateX(-10px);
+
+      }
+      100% {
+        transform: translateX(0px);
+      }
+  }
+
+
+:root{
+    --text-color:rgba(128, 128, 128, 0.518);
+}
+@media(max-width:500px){
+
+.R-panel{
+    display: none;
+}
+header{
+    display: block;
+}
+}
+.right-section .title {
+    position: relative;
+    z-index: -1;
+
+}
+.right-section h5 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.right-section .title::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 70px;
+    height: 3px;
+    background-color: red;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.right-section .first-box{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.right-section .first-box .box-one { 
+    display: flex;
+    width: 33%;
+    flex-wrap: wrap;
+    height: 340px;
+    justify-content: space-between;
+    padding: 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    margin-top: 10px;
+    animation:come-left 0.75s;
+}
+
+.right-section .first-box .title-box{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--text-color);
+}
+.right-section .first-box .title-box p:first-child{
+    width: 60%;
+    margin-bottom: 5px;
+}
+.right-section .first-box .title-box p:last-child{
+    width: 100%;
+    font-size: 12px;
+    color:var(--text-color);
+    
+}
+
+.right-section .first-box .images{
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid var(--text-color);
+    padding-bottom: 10px;
+    align-items: center;
+    animation: transleft 0.75s;
+}
+.right-section .first-box .images img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    border: 1px solid white;
+}
+
+.right-section .first-box .skills{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 1px solid var(--text-color);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    animation: transleft 0.75s;
+}
+.right-section .first-box .skills p {
+    width: 24%;
+    font-size: 10px;
+    height: fit-content;
+    background-color: rgba(128, 128, 128, 0.078);
+    border:1px solid white;
+    padding: 10px 0px 10px 5px ;
+    border-radius: 10px;
+    position: relative;
+
+}
+.right-section .first-box .skills p:hover{
+    color: white;
+    transition-delay: 0.5s;
+}
+.right-section .first-box .skills p::before {
+    content: "";
+    width: 0;
+    height: 0;
+    background-color: green;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+.right-section .first-box .skills p:hover::before{
+    z-index: -1;
+    animation: left-move 0.7s linear forwards;
+    
+}
+.right-section .first-box .money {
+    width: 100%;
+    padding-top: 15px;
+}
+
+.right-section .first-box .money .total{
+    margin-top: 10px;
+    text-align: center;
+    color:var(--text-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
+.right-section .first-box .b-one .info{
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.right-section .first-box .b-one .info .name h4:last-child,
+.right-section .first-box .b-one .info .proje h4:last-child,
+.right-section .first-box .b-one .info .earned h4:last-child {
+font-size: 10px;
+}
+.right-section .first-box .b-one .info::after{
+content: '';
+width: 95%;
+height: 1px;
+background-color:rgba(128, 128, 128, 0.219);
+position: absolute;
+top: 0px;
+}
+.right-section .first-box .b-one .info::before{
+    content: '';
+    width: 95%;
+    height: 1px;
+    background-color:rgba(128, 128, 128, 0.219);
+    position: absolute;
+    top: 90%;
+    }
+
+.money .info .progress,
+.proje .info .progress,
+.team .info .progress{
+        position: relative;
+        height:4px;
+}
+    
+    
+.money .info .progress > span,
+.proje .info .progress > span,
+.team .info .progress > span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    }
+    
+.money .info .progress > span span ,
+.proje .info .progress > span span,
+.team .info .progress > span span{
+        position: absolute;
+        bottom:16px;
+        right: -16px;
+        color:white;
+        padding: 2px 5px ;
+        border-radius: 6px;
+        font-size: 12px;
+    }
+.money .info .progress > span span::after ,
+.proje .info .progress > span span::after,
+.team .info .progress > span span::after{
+    content: "";
+    border-color: transparent;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    bottom:-10px;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    }
+.money  .blue .progress{
+        background-color: rgb(0 177 255 /20%);
+        z-index: -1;
+    } 
+.proje  .orange .progress{
+        background-color: rgb(245 158  11 /20%);
+    
+    }
+.team  .green .progress{
+        background-color: rgb(34 197 94 /20%);
+    
+    }
+
+.money  .blue .progress{
+        background-color: rgb(0 177 255 /20%);
+    } 
+
+@media (max-width:1000px){
+    .right-section .first-box .skills p{
+        width: 40%;
+    }
+    .right-section .first-box .box-one{
+        width: 48%;
+        justify-content:space-between;
+    }
+}   
+
+@media (max-width:500px){
+
+    .right-section .first-box .box-one{
+        width: 95%;
+    }
+    .right-section .first-box .skills p{
+        width: 40%;
+    }
+    .right-section .first-box .images img {
+        width: 20%;
+        height: 110%;
+        z-index: -1;
+    }
+}   
